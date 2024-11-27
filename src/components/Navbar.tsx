@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
         </div>
         <div className='px-0 md:px-6 mx-auto'>
             <SearchIcon className='absolute m-2' />
-            <input type='text' placeholder='Search' className='bg-blue-200 rounded-full py-2 px-8'/>
+            <input type='text'  className='bg-blue-200 rounded-full py-2 px-8'/>
         </div>
 
     </div>
