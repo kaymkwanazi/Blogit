@@ -2,13 +2,16 @@ import React from 'react'
 import logo from '../images/blogit.webp'
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   return (
     <>
     <div className='grid cols-1 md:grid-cols-4 my-5 justify-center'>
         <div className='mx-auto md:mx-0'>
-            <img src={logo} alt='logo' className='size-10 rounded-lg ml-8'/>
+            <Link to='/home'>
+                <img src={logo} alt='logo' className='size-10 rounded-lg ml-8'/>
+            </Link>
         </div>
         <div className='col-span-2 md:border-x-2 md:border-slate-200 md:px-6 my-6 md:my-0'>
             <div className='flex justify-between items-center'>

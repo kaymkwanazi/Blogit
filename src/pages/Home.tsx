@@ -2,9 +2,13 @@ import React from 'react';
 import { LeftSidebar } from '../components/LeftSidebar';
 import { RightSidebar } from '../components/RightSidebar';
 import { MainTweets } from '../components/MainTweets';
+import { Navbar } from '../components/Navbar';
 
 export const Home: React.FC = () => {
   return (
+    <>
+    <Navbar />
+
       <div className='grid cols-1 md:grid-cols-4'>
         <div className='px-4'>
           <LeftSidebar  />
@@ -17,5 +21,7 @@ export const Home: React.FC = () => {
         </div>
         
       </div>
+    </>
+    
   );
 };
