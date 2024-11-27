@@ -7,7 +7,7 @@ export const SignIn: React.FC = () => {
     <>
       <div className='container mx-auto px-4'>
         <h1 className='text-4xl text-center pt-5'>Sign In</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen'>
+        <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen space-x-5'>
           <div className=''>
             <img src={signin} alt='signin' className='object-cover w-full h-full' />
           </div>
