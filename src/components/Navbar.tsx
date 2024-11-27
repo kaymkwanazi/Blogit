@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
         <div className='mx-auto md:mx-0'>
             <img src={logo} alt='logo' className='size-10 rounded-lg ml-8'/>
         </div>
-        <div className='col-span-2 md:border-x-2 md:border-slate-300 md:px-6 my-6 md:my-0'>
+        <div className='col-span-2 md:border-x-2 md:border-slate-200 md:px-6 my-6 md:my-0'>
             <div className='flex justify-between items-center'>
                 <h1 className='text-2xl font-bold text-slate-900'>Home</h1>
                 <StarBorderPurple500Icon />
