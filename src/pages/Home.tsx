@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar } from '../components/Navbar';
 import { LeftSidebar } from '../components/LeftSidebar';
 import { RightSidebar } from '../components/RightSidebar';
+import { MainTweets } from '../components/MainTweets';
 
 export const Home: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
           <LeftSidebar  />
         </div>
         <div className='col-span-2 border-x-2 border-t-slate-800 px-6'>
-          <p>Tweets go here</p>
+          <MainTweets />
         </div>
         <div className='px-4'>
           <RightSidebar />
