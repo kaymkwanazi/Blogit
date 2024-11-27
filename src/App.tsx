@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <>
     <div className='md:w-8/12 mx-auto'>
         <BrowserRouter>
-        {/* <Navbar /> */}
+        <Navbar />
           <Routes>
             <Route path="/" element={<Navigate to="/register" />} />
             <Route path="/register" element={<Register />} />

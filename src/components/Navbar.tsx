@@ -2,9 +2,22 @@ import React from 'react'
 import logo from '../images/blogit.webp'
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
 import SearchIcon from '@mui/icons-material/Search';
-import { Link } from 'react-router-dom';
+import { Link , useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
+    const location = useLocation();
+    console.log("🚀 ~ location:", location)
+    const pageName = location.pathname.split('/')[1] || 'home';
+
+    // Function to capitalize the first letter as page names are all small letters, instead do not use it 
+    function capitalizeFirstLetter(string: string): string {
+        if (!string) return string;
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+
+      const pageTitle = capitalizeFirstLetter(pageName);
+
+    
   return (
     <>
     <div className='grid cols-1 md:grid-cols-4 my-5 justify-center'>
@@ -15,7 +28,7 @@ export const Navbar: React.FC = () => {
         </div>
         <div className='col-span-2 md:border-x-2 md:border-slate-200 md:px-6 my-6 md:my-0'>
             <div className='flex justify-between items-center'>
-                <h1 className='text-2xl font-bold text-slate-900'>Home</h1>
+                <h1 className='text-2xl font-bold text-slate-900'>{pageTitle}</h1>
                 <StarBorderPurple500Icon />
             </div>
         </div>
