@@ -5,14 +5,13 @@ import { Register } from "./pages/Register";
 import { SignIn } from "./pages/SignIn";
 import { Home } from './pages/Home';
 import { Navbar } from './components/Navbar';
+import { Profile } from './pages/Profile';
 
 const App: React.FC = () => {
   
   return (
     <>
     <div className='md:w-8/12 mx-auto'>
-        <Navbar />
-      
         <BrowserRouter>
         {/* <Navbar /> */}
           <Routes>
@@ -20,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/profile' element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </div>

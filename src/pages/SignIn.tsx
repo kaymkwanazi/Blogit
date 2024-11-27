@@ -1,5 +1,5 @@
 import React from 'react';
-import signin from '../images/Sign in-pana.png';
+import signin from '../images/Sign in-amico.png';
 import { Link } from 'react-router-dom';
 
 export const SignIn: React.FC = () => {
@@ -7,9 +7,9 @@ export const SignIn: React.FC = () => {
     <>
       <div className='container mx-auto px-4'>
         <h1 className='text-4xl text-center pt-5'>Sign In</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen space-x-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 h-11/12 space-x-10'>
           <div className=''>
-            <img src={signin} alt='signin' className='object-cover w-full h-full' />
+            <img src={signin} alt='signin' className='object-cover w-full ' />
           </div>
           <div className='flex items-center justify-center'>
             <form className='w-full max-w-md'>
