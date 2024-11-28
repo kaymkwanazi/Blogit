@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import { LeftSidebar } from '../components/LeftSidebar'
 import { RightSidebar } from '../components/RightSidebar'
 import { Navbar } from '../components/Navbar'
 import pp from '../images/profPic.png'
+import { Link } from 'react-router-dom'
 
 export const Profile: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('Posts');
@@ -32,7 +33,9 @@ export const Profile: React.FC = () => {
                     </div> 
 
                     <div className='flex justify-end items-center mt-20 mr-5'>
-                        <button className='bg-blue-500 text-white px-3 py-2 rounded-3xl'>Edit profile</button>
+                        <Link to='/edit'>
+                            <button className='bg-blue-500 text-white px-3 py-2 rounded-3xl'>Edit profile</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -47,11 +50,11 @@ export const Profile: React.FC = () => {
             </div>
             {/* 2nd section of profile page */}
             <div className='flex space-x-7 mt-3 mb-5 ml-5'>
-                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Posts' ? 'border-b-4 border-blue-500' : ''}`}
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Posts' ? 'border-b-2 border-blue-500' : ''}`}
                     onClick={() => setSelectedTab('Posts')}>Posts </p>
-                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Likes' ? 'border-b-4 border-blue-500' : ''}`}
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Likes' ? 'border-b-2 border-blue-500' : ''}`}
                      onClick={() => setSelectedTab('Likes')}>Likes </p>
-                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Media' ? 'border-b-4 border-blue-500' : ''}`}
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Media' ? 'border-b-2 border-blue-500' : ''}`}
                     onClick={() => setSelectedTab('Media')}> Media </p>
 
             </div>

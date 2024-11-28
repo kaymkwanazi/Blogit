@@ -8,7 +8,7 @@ export const Register: React.FC = () => {
       <div className='container mx-auto px-4'>
         <h1 className='text-4xl text-center pt-5'>Register</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 h-11/12 pace-x-10'>
-          <div className=''>
+          <div>
             <img src={signup} alt='signup' className='object-cover w-full ' />
           </div>
           <div className='flex items-center justify-center'>

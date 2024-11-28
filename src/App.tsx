@@ -5,6 +5,7 @@ import { Register } from "./pages/Register";
 import { SignIn } from "./pages/SignIn";
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
+import { EditProfile } from './pages/EditProfile';
 
 const App: React.FC = () => {
   
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/signin" element={<SignIn />} />
             <Route path='/home' element={<Home />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/edit' element={<EditProfile />} />
           </Routes>
         </BrowserRouter>
       </div>

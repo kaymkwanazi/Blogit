@@ -6,7 +6,6 @@ import { Link , useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
     const location = useLocation();
-    console.log("🚀 ~ location:", location)
     const pageName = location.pathname.split('/')[1] || 'home';
 
     // Function to capitalize the first letter as page names are all small letters, instead do not use it 
