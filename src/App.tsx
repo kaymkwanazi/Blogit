@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Register } from "./pages/Register";
 import { SignIn } from "./pages/SignIn";
 import { Home } from './pages/Home';
-import { Navbar } from './components/Navbar';
 import { Profile } from './pages/Profile';
 
 const App: React.FC = () => {
@@ -13,7 +12,6 @@ const App: React.FC = () => {
     <>
     <div className='md:w-8/12 mx-auto'>
         <BrowserRouter>
-        <Navbar />
           <Routes>
             <Route path="/" element={<Navigate to="/register" />} />
             <Route path="/register" element={<Register />} />

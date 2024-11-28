@@ -7,7 +7,7 @@ import { Navbar } from '../components/Navbar';
 export const Home: React.FC = () => {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
 
       <div className='grid cols-1 md:grid-cols-4'>
         <div className='px-4'>
