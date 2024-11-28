@@ -7,7 +7,7 @@ import pp from '../images/profPic.png'
 import { Link } from 'react-router-dom'
 
 export const Profile: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState('Posts');
+  const [selectedTab, setSelectedTab] = useState<string>('Posts');
 
     return (
     <>

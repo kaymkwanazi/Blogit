@@ -6,7 +6,7 @@ import { Link , useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
     const location = useLocation();
-    const pageName = location.pathname.split('/')[1] || 'home';
+    const pageName:string = location.pathname.split('/')[1] || 'home';
 
     // Function to capitalize the first letter as page names are all small letters, instead do not use it 
     function capitalizeFirstLetter(string: string): string {
@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
 
-      const pageTitle = capitalizeFirstLetter(pageName);
+      const pageTitle:string = capitalizeFirstLetter(pageName);
 
     
   return (
