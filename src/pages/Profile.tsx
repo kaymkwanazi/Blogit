@@ -2,34 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import { LeftSidebar } from '../components/LeftSidebar'
 import { RightSidebar } from '../components/RightSidebar'
-import {useSelector} from 'react-redux'
-import axios from 'axios'
-import {useParams} from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
 import pp from '../images/profPic.png'
 
 export const Profile: React.FC = () => {
-    // const [currentUser] = useSelector((state) => state.user);
-    // const [tweets, setTweets] = useState(null);
-    // const [userProfile, setUserProfile] = useState(null);
-    // const { userId } = useParams();
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const tweets = await axios.get(`tweets/user/all/${userId}`);
-    //             const userProfile = await axios.get(`users/${userId}`);
-
-    //             setTweets(tweets);
-    //             setUserProfile(userProfile);
-                           
-    //         } catch(err) {
-    //             console.log('error', err);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, [currentUser, id]);
+  const [selectedTab, setSelectedTab] = useState('Posts');
 
     return (
     <>
@@ -39,7 +16,8 @@ export const Profile: React.FC = () => {
                 <LeftSidebar />
             </div>
 
-        <div className='col-span-2 border-x-2 border-t-slate-800 px-4 bg-slate-200'>
+        <div className='col-span-2 border-x-2 border-t-slate-800 px-4'>
+            {/* Profile heading and edit button */}
             <div className='bg-slate-900 h-60 relative'>
                 <div className='grid grid-cols-3'>
                     <div className='relative flex justify-center items-center my-52'>
@@ -58,6 +36,33 @@ export const Profile: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className='flex flex-col justify-evenly border-b-2 border-slate-300 ml-5'>
+                <div className='mt-20 mb-3'>
+                    <p className='mt-2'>Bio goes here</p>
+                </div>
+                <div className='flex space-x-10 mb-3 mt-10'>
+                    <p className='font-semibold '>52 Followers</p>
+                    <p className='font-semibold '>10 Following</p>
+                </div>
+            </div>
+            {/* 2nd section of profile page */}
+            <div className='flex space-x-5 mt-3 mb-5 ml-5'>
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Posts' ? 'border-b-4 border-blue-500' : ''}`}
+                    onClick={() => setSelectedTab('Posts')}>Posts </p>
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Likes' ? 'border-b-4 border-blue-500' : ''}`}
+                     onClick={() => setSelectedTab('Likes')}>Likes </p>
+                <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Media' ? 'border-b-4 border-blue-500' : ''}`}
+                    onClick={() => setSelectedTab('Media')}> Media </p>
+
+            </div>
+            {/* Post */}
+            <div className='container mx-auto px-5'>
+                <div className='flex flex-col'>
+                    <p>Posts will go here</p>
+                </div>
+                
+            </div>
+
         </div>
 
             <div className='px-4'>
