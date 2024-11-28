@@ -46,7 +46,7 @@ export const Profile: React.FC = () => {
                 </div>
             </div>
             {/* 2nd section of profile page */}
-            <div className='flex space-x-5 mt-3 mb-5 ml-5'>
+            <div className='flex space-x-7 mt-3 mb-5 ml-5'>
                 <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Posts' ? 'border-b-4 border-blue-500' : ''}`}
                     onClick={() => setSelectedTab('Posts')}>Posts </p>
                 <p className={`font-bold text-lg cursor-pointer ${selectedTab === 'Likes' ? 'border-b-4 border-blue-500' : ''}`}
